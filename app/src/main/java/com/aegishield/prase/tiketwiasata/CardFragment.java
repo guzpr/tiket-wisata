@@ -31,10 +31,10 @@ public class CardFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.card_item, container, false);
 
-        cardView = (CardView) view.findViewById(R.id.cardView);
+        cardView = view.findViewById(R.id.cardView);
         cardView.setMaxCardElevation(cardView.getCardElevation() * CardAdapter.MAX_ELEVATION_FACTOR);
 
-        TextView title = (TextView) view.findViewById(R.id.title);
+        TextView title =  view.findViewById(R.id.title);
 
         title.setText(String.format("Wisata Placeholder %d",
                 getArguments().getInt("position")  + 1 ));
